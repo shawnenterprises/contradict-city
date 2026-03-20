@@ -56,10 +56,29 @@ a {
   cursor: pointer;
 }
 
-.banner {
-  text-align: center;
-  padding: 10px;
+.ticker {
+  overflow: hidden;
   border-bottom: 1px solid #222;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  display: inline-block;
+  animation: scroll 15s linear infinite;
+}
+
+.ticker span {
+  padding-right: 50px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 }
 
 .footer {
