@@ -6,3 +6,9 @@ document.querySelectorAll("a, button").forEach(el => {
     }, 100);
   });
 });
+
+window.onload = () => {
+  setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+  }, 1200);
+};
