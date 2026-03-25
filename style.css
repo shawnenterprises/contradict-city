@@ -163,3 +163,48 @@ a:hover, button:hover {
 .cart-footer {
   margin-top: 30px;
 }
+
+.product-page {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+.product-images {
+  width: 60%;
+}
+
+.product-images img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  width: 40%;
+}
+
+.price {
+  margin: 10px 0;
+}
+
+.desc {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.sizes button {
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #fdd200;
+  background: black;
+  color: #fdd200;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #fdd200;
+  background: black;
+  color: #fdd200;
+}
