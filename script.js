@@ -26,3 +26,14 @@ function register() {
   document.getElementById("status").innerText =
   "STATUS: REGISTERED CITIZEN";
 }
+
+let selectedSize = "M";
+
+function selectSize(el){
+  document.querySelectorAll(".sizes button").forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  el.classList.add("active");
+  selectedSize = el.innerText;
+}
