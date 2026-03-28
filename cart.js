@@ -20,3 +20,13 @@ function removeItem(index) {
 }
 
 updateCartCount();
+
+div.innerHTML = `
+  <div>
+    <p>${item.name}</p>
+    <p style="font-size:10px; opacity:0.6;">Size ${item.size}</p>
+  </div>
+  <input type="number" value="1">
+  <p>$45</p>
+  <button onclick="removeItem(${index})">X</button>
+`;
