@@ -39,7 +39,15 @@ cart.forEach((item, index) => {
 
   let div = document.createElement("div");
   div.className = "cart-row";
-
+  
+.cart-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+}
+  
   div.innerHTML = `
     <p>${item.name}</p>
     <input type="number" value="1">
