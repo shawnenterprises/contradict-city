@@ -276,14 +276,3 @@ a:hover, button:hover {
   background: #fdd200;
   color: black;
 }
-
-.product-page {
-  flex-direction: column;
-}
-
-.nav {
-  flex-direction: column;
-  gap: 10px;
-}
-
-}
