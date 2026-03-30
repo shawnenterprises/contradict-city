@@ -67,7 +67,7 @@ function getCartTotal() {
 }
 
 function updateShippingStatus(total) {
-  const threshold = 75;
+  const threshold = 70;
   const remaining = threshold - total;
 
   const statusText = document.getElementById("shippingStatusText");
