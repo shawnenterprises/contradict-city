@@ -278,22 +278,27 @@ a:hover, button:hover {
   margin-bottom: 20px;
 }
 
-.sizes button {
-  margin: 5px;
-  padding: 8px;
-  border: 1px solid #fdd200;
-  background: black;
-  color: #fdd200;
+.sizes {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 
-.add-btn {
-  width: 100%;
-  padding: 10px;
-  margin-top: 15px;
+.size-btn {
+  min-width: 42px;
+  height: 42px;
   border: 1px solid #fdd200;
   background: black;
   color: #fdd200;
+  cursor: pointer;
+  font-size: 13px;
 }
+
+.size-btn.active {
+  background: #fdd200;
+  color: black;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
