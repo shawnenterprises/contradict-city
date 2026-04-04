@@ -1,84 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop</title>
+  <title>Shop - Contradict</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="nav">
-<div>CONTRADICT</div>
-<div>
-<a href="index.html">Home</a>
-<a href="lookbook.html">Lookbook</a>
-</div>
-</div>
+  <div class="transmissions-bar">
+    TRANSMISSIONS: FREE SHIPPING OVER $70 — NEW DROP LIVE
+  </div>
 
-<div class="grid">
+  <header class="site-nav">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="lookbook.html">Lookbook</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-<div class="product">
-<a href="product.html">
-<img src="IMG_2353.PNG">
-</a>
-<p>RHINESTONE</p>
-<p><s>$35.00</s>
-</div>
+    <div class="nav-center">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Contradict" class="logo">
+      </a>
+    </div>
 
-<script src="script.js"></script>
+    <div class="nav-right">
+      <a href="map.html">City Map</a>
+      <a href="#registry">Citizen Registry</a>
+      <a href="search.html">Search</a>
+      <a href="javascript:void(0)" class="cart-link" onclick="openCartDrawer()">
+        Cart (<span id="cart-count">0</span>)
+      </a>
+    </div>
+  </header>
+
+  <main class="shop-page">
+    <div class="shop-header">
+      <h1>SHOP</h1>
+      <p>Issued within Contradict City.</p>
+    </div>
+
+    <div class="shop-grid">
+
+      <article class="shop-product-card">
+        <a href="product.html" class="shop-product-image-link">
+          <img src="hoodie-front.png" alt="Rhinestone Hoodie" class="shop-product-image">
+        </a>
+
+        <div class="shop-product-info">
+          <a href="product.html" class="shop-product-name">RHINESTONE</a>
+          <p class="shop-product-price">$35.00</p>
+        </div>
+      </article>
+
+      <!-- Duplicate this block for more products -->
+      <!--
+      <article class="shop-product-card">
+        <a href="product.html" class="shop-product-image-link">
+          <img src="your-product-image.png" alt="Product Name" class="shop-product-image">
+        </a>
+
+        <div class="shop-product-info">
+          <a href="product.html" class="shop-product-name">PRODUCT NAME</a>
+          <p class="shop-product-price">$00.00</p>
+        </div>
+      </article>
+      -->
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="returns.html">Free Returns</a>
+      <a href="checkout.html">Secure Checkout</a>
+      <a href="shipping.html">Fast Shipping</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="returns.html">Returns</a>
+    </div>
+  </footer>
+
   <div class="cart-overlay" id="cartOverlay" onclick="closeCartDrawer()"></div>
 
-<aside class="cart-drawer" id="cartDrawer">
-  <div class="cart-drawer-header">
-    <h2>CART</h2>
-    <button class="cart-close" onclick="closeCartDrawer()">×</button>
-  </div>
-
-  <div class="shipping-status-wrap">
-    <p class="shipping-status-text" id="shippingStatusText">
-      SPEND $70 MORE AND GET FREE SHIPPING
-    </p>
-    <div class="shipping-progress">
-      <div class="shipping-progress-bar" id="shippingProgressBar"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h2>CART</h2>
+      <button class="cart-close" onclick="closeCartDrawer()">×</button>
     </div>
-  </div>
 
-  <div class="cart-drawer-body">
-    <div id="cartDrawerItems"></div>
-
-    <div class="cart-divider"></div>
-
-    <div class="more-products-section">
-      <h3>MORE PRODUCTS</h3>
-      <div class="more-products-list">
-
-        <!-- FUTURE PRODUCT CARD TEMPLATE -->
-        <div class="more-product-card">
-          <a href="product.html" class="more-product-image-link">
-            <img src="your-image.jpg" alt="Product">
-          </a>
-          <div class="more-product-info">
-            <p class="more-product-name">PRODUCT NAME</p>
-            <p class="more-product-price">$00.00</p>
-          </div>
-          <button class="more-product-add">ADD +</button>
-        </div>
-
-        <!-- DUPLICATE THIS BLOCK LATER FOR MORE PRODUCTS -->
-
+    <div class="shipping-status-wrap">
+      <p class="shipping-status-text" id="shippingStatusText"></p>
+      <div class="shipping-progress">
+        <div class="shipping-progress-bar" id="shippingProgressBar"></div>
       </div>
     </div>
-  </div>
 
-  <div class="cart-drawer-footer">
-    <p class="cart-tax-note">Taxes &amp; Duties Included</p>
-    <button class="checkout-btn" onclick="checkout()">
-      CHECKOUT · $<span id="cartDrawerTotal">0.00</span>
-    </button>
-  </div>
-</aside>
+    <div class="cart-drawer-body">
+      <div id="cartDrawerItems"></div>
+
+      <div class="cart-divider"></div>
+
+      <div class="more-products-section">
+        <h3>MORE PRODUCTS</h3>
+        <div class="more-products-list">
+          <div class="more-product-card">
+            <a href="product.html" class="more-product-image-link">
+              <img src="your-image.jpg" alt="Product">
+            </a>
+            <div class="more-product-info">
+              <p class="more-product-name">PRODUCT NAME</p>
+              <p class="more-product-price">$00.00</p>
+            </div>
+            <button class="more-product-add">ADD +</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <p class="cart-tax-note">Taxes &amp; Duties Included</p>
+      <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+        CHECKOUT · $<span id="cartDrawerTotal">0.00</span>
+      </button>
+    </div>
+  </aside>
+
   <script src="cart.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
